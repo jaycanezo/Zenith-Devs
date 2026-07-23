@@ -17,76 +17,6 @@ body {
     padding: 0 clamp(20px, 5vw, 80px);
 }
 
-header {
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    background: white;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.logo {
-    display: flex;
-    gap: 8px;
-}
-
-.logo img {
-    height: 40px;
-    
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: clamp(10px, 3vw, 40px);
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #364DDD;
-}
-
-/* Nav links hover animation */
-.nav-links a {
-    position: relative;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #364DDD;
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
 main {
     margin-top: 20px;
 }
@@ -339,24 +269,6 @@ hr {
 }
 
 @media (max-width: 768px) {
-    
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .logo{
-        margin: 0 auto;
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
-    
-    .nav-links li {
-        margin: 10px 0;
-    }
-    
     .container-footer {
         flex-direction: column;
     }

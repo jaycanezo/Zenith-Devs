@@ -23,73 +23,6 @@ a {
     text-decoration: none;
 }
 
-/* Header and Navigation */
-header {
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    background: white;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.logo {
-    display: flex;
-    gap: 8px;
-    animation-delay: 0.2s;
-}
-
-.logo img {
-    height: 40px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: clamp(10px, 3vw, 40px);
-    animation-delay: 0.4s;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-.nav-links a:hover {
-    color: #364DDD;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #364DDD;
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
 /* Hero Section */
 .hero-section {
     display: flex;
@@ -707,33 +640,6 @@ hr {
 }
 
 @media (max-width: 768px) {
-    header {
-        position: fixed;
-        left: 0;
-        right: 0;
-        width: 100%;
-    }
-
-    body {
-        padding-top: 92px;
-    }
-
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-        gap: 15px;
-        padding: 15px 0;
-    }
-    
-    header {
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    
-    .logo {
-        margin: 0 auto;
-    }
-
     .contact-form, .contact-details {
         padding: 25px 4%;
     }
@@ -805,14 +711,6 @@ hr {
 }
 
 @media (max-width: 480px) {
-    body {
-        padding-top: 84px;
-    }
-
-    header {
-        padding: 14px 0;
-    }
-
     .hero-text {
         padding: 30px 20px;
     }

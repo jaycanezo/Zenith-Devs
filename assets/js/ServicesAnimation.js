@@ -5,11 +5,10 @@ const carousel = document.getElementById('carousel');
     
     // Images and captions - limited to 5
     const items = [
-      { src: "https://www.pocketdevs.ph/_next/image?url=%2Fimages%2Fcase_studies%2Fbooqed%2Fcover.png&w=3840&q=90", caption: "Web Development" },
-      { src: "https://images.tmcnet.com/tmc/misc/articles/image/2023-dec/1438732310-AdobeStock_543542506_cloud_computing_service_security_edge_SSE_abstract_supersize_1200x630.jpeg", caption: "Cloud Services" },
-      { src: "https://cdn.dribbble.com/users/3665248/screenshots/17655985/mockup_4x.jpg", caption: "Mobile Development" },
-      { src: "https://www.ramco.com/hubfs/Data-Safety-with-Payroll-outsourcing.jpg#keepProtocol", caption: "CyberSecurity" },
-      { src: "https://nixstech.com/wp-content/uploads/2023/10/676%D1%85400-1-1.png", caption: "Custom Software Solutions" }
+      { src: "assets/images/services-images/web-development.png", caption: "Web Development" },
+      { src: "assets/images/services-images/Mobile-App.png", caption: "Mobile App Development" },
+      { src: "assets/images/services-images/data-base-managemente.png", caption: "Database Management" },
+      { src: "assets/images/services-images/customsoftwaredev.png", caption: "Custom Software Solutions" }
     ];
     
     let current = 0;
