@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cards = document.querySelectorAll('.slider-card');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
+    const mobileBreakpoint = window.matchMedia('(max-width: 768px)');
     
     // Define how each card should look in the stack (size, position, etc.)
     let cardStyles = [
@@ -24,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Add touch controls for mobile devices
     const sliderContainer = document.querySelector('.slider-container');
+    let touchStartX = 0;
+    let touchEndX = 0;
     
     // Remember where the touch started
     sliderContainer.addEventListener('touchstart', function(e) {
@@ -72,12 +75,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const position = (currentCard + i) % totalCards;
             const card = cards[i];
             const style = cardStyles[position];
-            
-            // Apply the correct style to each card
-            card.style.transform = `scale(${style.scale}) translateY(${style.y}px)`;
+
+            if (mobileBreakpoint.matches) {
+                card.style.left = '50%';
+                card.style.right = 'auto';
+                card.style.transform = `translateX(-50%) translateY(${style.y}px) scale(${style.scale})`;
+            } else {
+                card.style.left = 'auto';
+                card.style.right = style.right;
+                card.style.transform = `scale(${style.scale}) translateY(${style.y}px)`;
+            }
+
             card.style.zIndex = style.z;
             card.style.opacity = style.opacity;
-            card.style.right = style.right;
         }
     }
 });
